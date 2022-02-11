@@ -1,0 +1,24 @@
+{
+  "name": "SCCP_2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s1290020/SCCP_2022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s1290020/SCCP_2022/issues"
+  },
+  "homepage": "https://github.com/s1290020/SCCP_2022#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "sqlite3": "^5.0.2"
+  }
+}
