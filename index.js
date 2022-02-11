@@ -158,7 +158,18 @@ app.get("/tweets/:id", (req, res) => {
 //ツイート削除
 app.delete("/tweets/:id", (req, res) => {
 	const id = Number(req.params["id"])
-	db.serialize(() => {
+    db.serialize(() => {
+	db.get("SELECT * FROM tweets WHERE id = ?", id, (err, row) => {
+			if (err !== null) {
+				console.log(err)
+				res.statusCode = 500
+				res.json(err)
+			} else if (row === undefined) {
+				res.statusCode = 404
+				res.end()
+			}
+	})
+	
 		db.run("DELETE FROM tweets WHERE id = ?", id, (err) => {
 			if(err !== null){
 				console.log(err)
